@@ -1,12 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
 using FinalProject.Models;
 using Microsoft.EntityFrameworkCore;
 
+// scaffold-dbcontext "Data Source=(localdb)\MSSQLLocalDB; Database=IMDB; Integrated Security=True" Microsoft.EntityFrameworkCore.SqlServer -ContextDir Data -OutputDir Models\Generated -DataAnnotations -ContextNamespace FinalProject.Data -Namespace FinalProject.Models
 namespace FinalProject.Data;
-
-//---scaffolding command used---//
-//scaffold-dbcontext "Data Source=(localdb)\MSSQLLocalDB; Database=IMDB; Integrated Security=True" Microsoft.EntityFrameworkCore.SqlServer -ContextDir Data -OutputDir Models\Generated -DataAnnotations -ContextNamespace FinalProject.Data -Namespace FinalProject.Models
 
 public partial class ImdbContext : DbContext
 {
@@ -33,10 +32,14 @@ public partial class ImdbContext : DbContext
 
     public virtual DbSet<TitleAlias> TitleAliases { get; set; }
 
-    //potentially want to move, can't find app.config
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-#warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
-        => optionsBuilder.UseSqlServer("Data Source=(localdb)\\MSSQLLocalDB; Database=IMDB; Integrated Security=True");
+    {
+        if (!optionsBuilder.IsConfigured)
+        {
+            string connectionString = ConfigurationManager.ConnectionStrings["IMDBConnectionString"].ConnectionString;
+            optionsBuilder.UseSqlServer(connectionString);
+        }
+    }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {

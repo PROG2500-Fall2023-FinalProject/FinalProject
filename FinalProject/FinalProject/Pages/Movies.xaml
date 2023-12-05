@@ -20,18 +20,17 @@
                 <Image Source="{StaticResource search}"/>
             </Button>
         </StackPanel>
-        <TextBlock Style="{StaticResource HomeSubHeader}" Text="test"/>
-
 
         <Border Style="{StaticResource borders}">
             <ListView x:Name="movieListView" ItemsSource="{Binding Source={StaticResource movieViewSource}}">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <WrapPanel Width="695" Margin="0,2,0,2">
-                            <TextBlock Style="{StaticResource HomeSubHeader}" Text="test"/>
+                            <TextBlock Style="{StaticResource HomeSubHeader}" Text="{Binding PrimaryTitle}"/>
+                            <TextBlock Style="{StaticResource HomeSubHeader}" Text="{Binding OriginalTitle}"/>
                             <!--title & composer-->
                             <StackPanel Orientation="Vertical" Width="540" Margin="0,0,5,0">
-                                <TextBlock Style="{StaticResource HomeSubHeader}" Text="{Binding PrimaryName}"></TextBlock>
+                                <TextBlock Style="{StaticResource HomeSubHeader}" Text="primary name"></TextBlock>
                                 <TextBlock Style="{StaticResource HomeBody}" TextWrapping="Wrap" Text="original title"></TextBlock>
                             </StackPanel>
 

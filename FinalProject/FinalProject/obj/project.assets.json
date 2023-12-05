@@ -2886,24 +2886,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\sarah\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\sarah\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\sarah\\Desktop\\sarah\\nscc\\fall2023\\PROG2500\\FinalProject\\FinalProject\\FinalProject\\FinalProject.csproj",
+      "projectUniqueName": "D:\\sarah\\nscc\\fall2023\\PROG2500\\FinalProject\\FinalProject\\FinalProject\\FinalProject.csproj",
       "projectName": "FinalProject",
-      "projectPath": "C:\\Users\\sarah\\Desktop\\sarah\\nscc\\fall2023\\PROG2500\\FinalProject\\FinalProject\\FinalProject\\FinalProject.csproj",
+      "projectPath": "D:\\sarah\\nscc\\fall2023\\PROG2500\\FinalProject\\FinalProject\\FinalProject\\FinalProject.csproj",
       "packagesPath": "C:\\Users\\sarah\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\sarah\\Desktop\\sarah\\nscc\\fall2023\\PROG2500\\FinalProject\\FinalProject\\FinalProject\\obj\\",
+      "outputPath": "D:\\sarah\\nscc\\fall2023\\PROG2500\\FinalProject\\FinalProject\\FinalProject\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
         "C:\\Users\\sarah\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -2969,7 +2964,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
       }
     }
   }
