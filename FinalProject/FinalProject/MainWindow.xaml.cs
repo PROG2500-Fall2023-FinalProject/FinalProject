@@ -28,6 +28,18 @@ namespace FinalProject
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
             mainFrame.NavigationService.Navigate(new Pages.Home());
+
+            // remove toolbar overflow from right side -- https://stackoverflow.com/a/1051264
+            var overflowGrid = toolbar.Template.FindName("OverflowGrid", toolbar) as FrameworkElement;
+            if (overflowGrid != null)
+            {
+                overflowGrid.Visibility = Visibility.Collapsed;
+            }
+            var mainPanelBorder = toolbar.Template.FindName("MainPanelBorder", toolbar) as FrameworkElement;
+            if (mainPanelBorder != null)
+            {
+                mainPanelBorder.Margin = new Thickness();
+            }
         }
 
         private void Home_Click(object sender, RoutedEventArgs e)

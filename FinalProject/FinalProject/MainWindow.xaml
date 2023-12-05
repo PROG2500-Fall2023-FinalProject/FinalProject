@@ -46,9 +46,8 @@
                 </MenuItem>
             </MenuItem>
         </Menu>
-        <ToolBar DockPanel.Dock="Bottom" 
+        <ToolBar x:Name="toolbar" DockPanel.Dock="Bottom" 
                  ToolBarTray.IsLocked="True" 
-                 ToolBar.OverflowMode="Never"
                  Style="{StaticResource NavToolbar}">
             <ToolBar.Resources>
                 <Style TargetType="{x:Type DockPanel}">
@@ -56,7 +55,7 @@
                 </Style>
             </ToolBar.Resources>
 
-            <StackPanel Orientation="Horizontal" Height="50">
+            <StackPanel Orientation="Horizontal" Height="50" ToolBar.OverflowMode="Never">
                 <Button x:Name="HomeButton" Click="Home_Click" ToolTip="Go to Home Page" Style="{StaticResource NavButton}">
                     <Image Source="{StaticResource home}"/>
                 </Button>

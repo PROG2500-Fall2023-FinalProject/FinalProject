@@ -10,14 +10,29 @@
         <Style x:Key="NavButton" TargetType="Button">
             <Setter Property="Margin" Value="20,0,20,0"/>
             <Setter Property="Background" Value="Transparent"/>
-            <Setter Property="BorderThickness" Value="0"/>
+            <!-- mouse hover: https://stackoverflow.com/a/17259993 -->
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border Background="{TemplateBinding Background}" BorderThickness="0">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="PeachPuff"/>
+                </Trigger>
+            </Style.Triggers>
         </Style>
 
         <Style x:Key="NavToolbar" TargetType="ToolBar">
             <Setter Property="Margin" Value="0,20,0,20"/>
             <Setter Property="Background" Value="Chocolate"/>
         </Style>
-        
+
+
         <!-- Home Styles -->
 
         <Style x:Key="HomePanel" TargetType="StackPanel">
