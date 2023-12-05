@@ -12,12 +12,12 @@ practices, LINQ, etc..
 > Lists a summary of data with examples of related data being displayed.
 Project Deliverables
 > Project Proposal (5% of Final Mark):
-* Project description
-* Wireframe of application
-* Basic workplan, including timeline and member assignments
+>* Project description
+>* Wireframe of application
+>* Basic workplan, including timeline and member assignments
 > Team Collaboration and Progress Journal (5% of Final Mark)
-* Work Progress Logs (Kept by individual students, combined for submission)
-* Team Resources/Links documentation
-* Project commentary/documentation
+>* Work Progress Logs (Kept by individual students, combined for submission)
+>* Team Resources/Links documentation
+>* Project commentary/documentation
 > Application Evaluation & In-Class Demonstration (15% of Final Mark)
 > Peer & Self Evaluations (5% of Final Mark)
