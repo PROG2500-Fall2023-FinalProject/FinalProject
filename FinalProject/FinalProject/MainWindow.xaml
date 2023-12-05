@@ -5,18 +5,10 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:FinalProject"
         mc:Ignorable="d"
+        Icon="{StaticResource icon}"
         Title="MainWindow" Height="450" Width="800" 
         Loaded="Window_Loaded"
         Background="PeachPuff">
-    
-    <Window.Resources>
-        <ResourceDictionary>
-            <BitmapImage x:Key="home" UriSource="/Images/home.png"></BitmapImage>
-            <BitmapImage x:Key="actor" UriSource="/Images/actor.png"></BitmapImage>
-            <BitmapImage x:Key="genre" UriSource="/Images/genre.png"></BitmapImage>
-            <BitmapImage x:Key="movie" UriSource="/Images/movie.png"></BitmapImage>
-        </ResourceDictionary>
-    </Window.Resources>
 
     <DockPanel>
         <Menu DockPanel.Dock="Top">

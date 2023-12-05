@@ -128,3 +128,5 @@ C:\Users\sarah\Desktop\sarah\nscc\fall2023\PROG2500\FinalProject\FinalProject\Fi
 C:\Users\sarah\Desktop\sarah\nscc\fall2023\PROG2500\FinalProject\FinalProject\FinalProject\obj\Debug\net7.0-windows\FinalProject.pdb
 C:\Users\sarah\Desktop\sarah\nscc\fall2023\PROG2500\FinalProject\FinalProject\FinalProject\obj\Debug\net7.0-windows\FinalProject.genruntimeconfig.cache
 C:\Users\sarah\Desktop\sarah\nscc\fall2023\PROG2500\FinalProject\FinalProject\FinalProject\obj\Debug\net7.0-windows\ref\FinalProject.dll
+C:\Users\sarah\Desktop\sarah\nscc\fall2023\PROG2500\FinalProject\FinalProject\FinalProject\obj\Debug\net7.0-windows\Pages\Movies.g.cs
+C:\Users\sarah\Desktop\sarah\nscc\fall2023\PROG2500\FinalProject\FinalProject\FinalProject\obj\Debug\net7.0-windows\Pages\Movies.baml

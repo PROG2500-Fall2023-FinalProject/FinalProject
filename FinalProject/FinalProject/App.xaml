@@ -4,12 +4,25 @@
              xmlns:local="clr-namespace:FinalProject"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
+        <!-- Icon Reference
+            <a href="https://www.flaticon.com/free-icons/search" title="search icons">Search icons created by Freepik - Flaticon</a> 
+            <a href="https://www.flaticon.com/free-icons/movie" title="movie icons">Movie icons created by Freepik - Flaticon</a>
+        -->
+
+        <!-- Icon Bitmaps -->
+        <BitmapImage x:Key="home" UriSource="/Images/home.png"></BitmapImage>
+        <BitmapImage x:Key="actor" UriSource="/Images/actor.png"></BitmapImage>
+        <BitmapImage x:Key="genre" UriSource="/Images/genre.png"></BitmapImage>
+        <BitmapImage x:Key="movie" UriSource="/Images/movie.png"></BitmapImage>
+        <BitmapImage x:Key="search" UriSource="/Images/loupe.png"></BitmapImage>
+        <BitmapImage x:Key="icon" UriSource="/Images/movie-frame.ico"></BitmapImage>
 
         <!-- Main Window Styles -->
 
         <Style x:Key="NavButton" TargetType="Button">
             <Setter Property="Margin" Value="20,0,20,0"/>
             <Setter Property="Background" Value="Transparent"/>
+
             <!-- mouse hover: https://stackoverflow.com/a/17259993 -->
             <Setter Property="Template">
                 <Setter.Value>
@@ -61,6 +74,27 @@
             <Setter Property="FontSize" Value="12"/>
             <Setter Property="TextAlignment" Value="Center"/>
             <Setter Property="TextWrapping" Value="Wrap"/>
+        </Style>
+
+        <Style x:Key="SearchBox" TargetType="TextBox">
+            <Setter Property="FontSize" Value="32" />
+            <Setter Property="Foreground" Value="SaddleBrown" />
+            <Setter Property="Height" Value="45" />
+            <Setter Property="Width" Value="275" />
+        </Style>
+
+        <Style x:Key="SearchBtn" TargetType="Button">
+            <Setter Property="Background" Value="Transparent"/>
+            <Setter Property="BorderThickness" Value="0" />
+            <Setter Property="Height" Value="45" />
+            <Setter Property="Width" Value="45" />
+        </Style>
+
+        <Style x:Key="borders" TargetType="Border">
+            <Setter Property="BorderBrush" Value="SaddleBrown"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="CornerRadius" Value="8"/>
+            <Setter Property="Margin" Value="5"/>
         </Style>
 
     </Application.Resources>

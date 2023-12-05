@@ -59,7 +59,7 @@ namespace FinalProject
 
         private void ViewMovies_Click(object sender, RoutedEventArgs e)
         {
-            //mainFrame.NavigationService.Navigate(new Pages.Movies());
+            mainFrame.NavigationService.Navigate(new Pages.Movies());
         }
 
         private void Exit(object sender, RoutedEventArgs e)

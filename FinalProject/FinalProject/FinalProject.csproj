@@ -11,6 +11,8 @@
     <None Remove="Images\actor.png" />
     <None Remove="Images\genre.png" />
     <None Remove="Images\home.png" />
+    <None Remove="Images\loupe.png" />
+    <None Remove="Images\movie-frame.ico" />
     <None Remove="Images\movie.png" />
   </ItemGroup>
 
@@ -28,10 +30,22 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Resource Include="Images\actor.png" />
-    <Resource Include="Images\genre.png" />
-    <Resource Include="Images\home.png" />
-    <Resource Include="Images\movie.png" />
+    <Resource Include="Images\actor.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\genre.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\home.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\loupe.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\movie-frame.ico" />
+    <Resource Include="Images\movie.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
   </ItemGroup>
 
 </Project>
