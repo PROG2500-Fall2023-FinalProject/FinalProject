@@ -13,7 +13,7 @@ database.
 
 Project Deliverables  
 * Project Proposal (5% of Final Mark):  
-> * Project description  
+    * Project description  
 > * Wireframe of application  
 > * Basic workplan, including timeline and member assignments  
 * Team Collaboration and Progress Journal (5% of Final Mark)  
