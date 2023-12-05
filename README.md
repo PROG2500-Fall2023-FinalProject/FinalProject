@@ -2,8 +2,7 @@
 Windows C# IMDB database search application
 
 As a group, build a WPF application that:
-> Uses Entity Framework to display data from the provided IMDB SQL Server database.  
-> **Note: Database backup file is on Brightspace. ERD is saved as a Database Diagram within the
+Uses Entity Framework to display data from the provided IMDB SQL Server database.  **Note: Database backup file is on Brightspace. ERD is saved as a Database Diagram within the
 database.
 > Demonstrates proper use of main WPF course concepts, including databinding, XAML UI
 practices, LINQ, etc..
