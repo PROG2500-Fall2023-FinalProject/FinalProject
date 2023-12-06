@@ -32,35 +32,7 @@ namespace FinalProject.Pages
             InitializeComponent();
             movieViewSource = (CollectionViewSource)FindResource(nameof(movieViewSource));
 
-            Console.WriteLine("before _context.load");
-
-            try
-            {
-                _context.Titles.Load();
-                movieViewSource.Source = _context.Names.Local.ToObservableCollection();
-                loadData();
-            } catch (Exception ex)
-            {
-                Console.WriteLine(ex.Message);
-            }
-            Console.WriteLine("after _context.load and viewsource");
-        }
-
-        private void loadData()
-        {
-            //LinQ query
-            var query =
-                from movies in _context.Titles
-                where movies.PrimaryTitle.Contains(movieSearch.Text)
-                group movies by movies.PrimaryTitle.ToUpper().Substring(0, 1) into newGroup
-                select new
-                {
-                    Index = newGroup.Key,
-                    movieCount = newGroup.Count().ToString(),
-                    movie = newGroup.ToList<Title>()
-                };
-
-            movieListView.ItemsSource = query.ToList();
+            movieViewSource.Source = _context.Names.Local.ToObservableCollection();
         }
 
         private void btnSearch_Click(object sender, RoutedEventArgs e)

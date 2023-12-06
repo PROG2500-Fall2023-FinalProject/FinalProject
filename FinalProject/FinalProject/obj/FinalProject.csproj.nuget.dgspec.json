@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\alexs\\Documents\\School\\PROG 2500 - Windows Programming C#\\Assignments\\FinalProject\\FinalProject\\FinalProject\\FinalProject.csproj": {}
+    "D:\\sarah\\nscc\\fall2023\\PROG2500\\FinalProject\\FinalProject\\FinalProject\\FinalProject.csproj": {}
   },
   "projects": {
-    "C:\\Users\\alexs\\Documents\\School\\PROG 2500 - Windows Programming C#\\Assignments\\FinalProject\\FinalProject\\FinalProject\\FinalProject.csproj": {
+    "D:\\sarah\\nscc\\fall2023\\PROG2500\\FinalProject\\FinalProject\\FinalProject\\FinalProject.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\alexs\\Documents\\School\\PROG 2500 - Windows Programming C#\\Assignments\\FinalProject\\FinalProject\\FinalProject\\FinalProject.csproj",
+        "projectUniqueName": "D:\\sarah\\nscc\\fall2023\\PROG2500\\FinalProject\\FinalProject\\FinalProject\\FinalProject.csproj",
         "projectName": "FinalProject",
-        "projectPath": "C:\\Users\\alexs\\Documents\\School\\PROG 2500 - Windows Programming C#\\Assignments\\FinalProject\\FinalProject\\FinalProject\\FinalProject.csproj",
-        "packagesPath": "C:\\Users\\alexs\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\alexs\\Documents\\School\\PROG 2500 - Windows Programming C#\\Assignments\\FinalProject\\FinalProject\\FinalProject\\obj\\",
+        "projectPath": "D:\\sarah\\nscc\\fall2023\\PROG2500\\FinalProject\\FinalProject\\FinalProject\\FinalProject.csproj",
+        "packagesPath": "C:\\Users\\sarah\\.nuget\\packages\\",
+        "outputPath": "D:\\sarah\\nscc\\fall2023\\PROG2500\\FinalProject\\FinalProject\\FinalProject\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\alexs\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\sarah\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

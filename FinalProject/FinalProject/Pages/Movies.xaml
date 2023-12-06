@@ -22,22 +22,23 @@
         </StackPanel>
 
         <Border Style="{StaticResource borders}">
-            <ListView x:Name="movieListView" ItemsSource="{Binding Source={StaticResource movieViewSource}}">
+            <ListView x:Name="movieListView" ItemsSource="{Binding Source={StaticResource movieViewSource}}" Style="{StaticResource lvStyle}">
                 <ListView.ItemTemplate>
                     <DataTemplate>
-                        <WrapPanel Width="695" Margin="0,2,0,2">
-                            <TextBlock Style="{StaticResource HomeSubHeader}" Text="{Binding PrimaryTitle}"/>
-                            <TextBlock Style="{StaticResource HomeSubHeader}" Text="{Binding OriginalTitle}"/>
-                            <!--title & composer-->
+                        <WrapPanel Margin="10,1,0,1" Style="{StaticResource bgData}">
+                            <!--title & airtime-->
                             <StackPanel Orientation="Vertical" Width="540" Margin="0,0,5,0">
-                                <TextBlock Style="{StaticResource HomeSubHeader}" Text="primary name"></TextBlock>
-                                <TextBlock Style="{StaticResource HomeBody}" TextWrapping="Wrap" Text="original title"></TextBlock>
+                                <TextBlock Style="{StaticResource dataTitle}" Text="{Binding PrimaryTitle}"></TextBlock>
+                                <TextBlock Style="{StaticResource dataDetails}" TextWrapping="Wrap" 
+                               Text="{Binding AirTime}"></TextBlock>
                             </StackPanel>
 
-                            <!--lenght, size & price-->
+                            <!--type, duration & isadult-->
                             <StackPanel Orientation="Vertical" Width="150">
                                 <!--int formating: https://stackoverflow.com/a/18597072-->
-                                <TextBlock Style="{StaticResource HomeSubHeader}" Text="additional info"></TextBlock>
+                                <TextBlock Style="{StaticResource datahighlights}" Text="{Binding TitleType, StringFormat=Show: {0:N0}}"></TextBlock>
+                                <TextBlock Style="{StaticResource datahighlights}" Text="{Binding Duration}"></TextBlock>
+                                <TextBlock Style="{StaticResource datahighlights}" Text="{Binding AdultFilm}"></TextBlock>
                             </StackPanel>
                         </WrapPanel>
                     </DataTemplate>
