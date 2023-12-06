@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\sarah\\nscc\\fall2023\\PROG2500\\FinalProject\\FinalProject\\FinalProject\\FinalProject.csproj": {}
+    "C:\\Users\\alexs\\Documents\\School\\PROG 2500 - Windows Programming C#\\Assignments\\FinalProject\\FinalProject\\FinalProject\\FinalProject.csproj": {}
   },
   "projects": {
-    "D:\\sarah\\nscc\\fall2023\\PROG2500\\FinalProject\\FinalProject\\FinalProject\\FinalProject.csproj": {
+    "C:\\Users\\alexs\\Documents\\School\\PROG 2500 - Windows Programming C#\\Assignments\\FinalProject\\FinalProject\\FinalProject\\FinalProject.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\sarah\\nscc\\fall2023\\PROG2500\\FinalProject\\FinalProject\\FinalProject\\FinalProject.csproj",
+        "projectUniqueName": "C:\\Users\\alexs\\Documents\\School\\PROG 2500 - Windows Programming C#\\Assignments\\FinalProject\\FinalProject\\FinalProject\\FinalProject.csproj",
         "projectName": "FinalProject",
-        "projectPath": "D:\\sarah\\nscc\\fall2023\\PROG2500\\FinalProject\\FinalProject\\FinalProject\\FinalProject.csproj",
-        "packagesPath": "C:\\Users\\sarah\\.nuget\\packages\\",
-        "outputPath": "D:\\sarah\\nscc\\fall2023\\PROG2500\\FinalProject\\FinalProject\\FinalProject\\obj\\",
+        "projectPath": "C:\\Users\\alexs\\Documents\\School\\PROG 2500 - Windows Programming C#\\Assignments\\FinalProject\\FinalProject\\FinalProject\\FinalProject.csproj",
+        "packagesPath": "C:\\Users\\alexs\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\alexs\\Documents\\School\\PROG 2500 - Windows Programming C#\\Assignments\\FinalProject\\FinalProject\\FinalProject\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\sarah\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\alexs\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -42,23 +42,23 @@
           "dependencies": {
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
-              "version": "[7.0.14, )"
+              "version": "[7.0.3, )"
             },
             "Microsoft.EntityFrameworkCore.Design": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[7.0.14, )"
+              "version": "[7.0.3, )"
             },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
-              "version": "[7.0.14, )"
+              "version": "[7.0.3, )"
             },
             "Microsoft.EntityFrameworkCore.Tools": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[7.0.14, )"
+              "version": "[7.0.3, )"
             }
           },
           "imports": [

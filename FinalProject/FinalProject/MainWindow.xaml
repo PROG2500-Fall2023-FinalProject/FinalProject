@@ -18,22 +18,22 @@
             <MenuItem Header="_Pages">
                 <MenuItem x:Name="Home" Header="_Home" Click="Home_Click">
                     <MenuItem.Icon>
-                        <Image Source="{StaticResource home}"></Image>
+                        <Image Source="{StaticResource home}"/>
                     </MenuItem.Icon>
                 </MenuItem>
                 <MenuItem x:Name="ViewMovies" Header="_View Movies" Click="ViewMovies_Click">
                     <MenuItem.Icon>
-                        <Image Source="{StaticResource movie}"></Image>
+                        <Image Source="{StaticResource movie}"/>
                     </MenuItem.Icon>
                 </MenuItem>
                 <MenuItem x:Name="ViewActors" Header="_View Actors" Click="ViewActors_Click">
                     <MenuItem.Icon>
-                        <Image Source="{StaticResource actor}"></Image>
+                        <Image Source="{StaticResource actor}"/>
                     </MenuItem.Icon>
                 </MenuItem>
                 <MenuItem x:Name="ViewGenres" Header="_View Genres" Click="ViewGenres_Click">
                     <MenuItem.Icon>
-                        <Image Source="{StaticResource genre}"></Image>
+                        <Image Source="{StaticResource genre}"/>
                     </MenuItem.Icon>
                 </MenuItem>
             </MenuItem>

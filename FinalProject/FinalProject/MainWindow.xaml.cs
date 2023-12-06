@@ -49,7 +49,7 @@ namespace FinalProject
 
         private void ViewActors_Click(object sender, RoutedEventArgs e)
         {
-            //mainFrame.NavigationService.Navigate(new Pages.Actors());
+            mainFrame.NavigationService.Navigate(new Pages.Actors());
         }
 
         private void ViewGenres_Click(object sender, RoutedEventArgs e)

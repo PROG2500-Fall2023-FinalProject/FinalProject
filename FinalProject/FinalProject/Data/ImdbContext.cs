@@ -4,8 +4,10 @@ using System.Configuration;
 using FinalProject.Models;
 using Microsoft.EntityFrameworkCore;
 
-// scaffold-dbcontext "Data Source=(localdb)\MSSQLLocalDB; Database=IMDB; Integrated Security=True" Microsoft.EntityFrameworkCore.SqlServer -ContextDir Data -OutputDir Models\Generated -DataAnnotations -ContextNamespace FinalProject.Data -Namespace FinalProject.Models
 namespace FinalProject.Data;
+
+// Scaffold Command:
+// scaffold-dbcontext "Data Source=(localdb)\MSSQLLocalDB;Database=IMDB;Integrated Security=True" Microsoft.EntityFrameworkCore.SqlServer -ContextDir Data -OutputDir Models\Generated -DataAnnotations -ContextNamespace FinalProject.Data -Namespace FinalProject.Models -force
 
 public partial class ImdbContext : DbContext
 {
