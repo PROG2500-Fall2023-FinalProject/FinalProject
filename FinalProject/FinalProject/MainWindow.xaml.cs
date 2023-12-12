@@ -54,7 +54,7 @@ namespace FinalProject
 
         private void ViewGenres_Click(object sender, RoutedEventArgs e)
         {
-            //mainFrame.NavigationService.Navigate(new Pages.Genres());
+            mainFrame.NavigationService.Navigate(new Pages.Genres());
         }
 
         private void ViewMovies_Click(object sender, RoutedEventArgs e)
