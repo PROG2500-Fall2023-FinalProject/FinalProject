@@ -12,10 +12,50 @@
         <CollectionViewSource x:Key="genreViewSource"></CollectionViewSource>
 
         <Style x:Key="ExpanderStyle" TargetType="Expander">
-            <Setter Property="Background" Value="#F5F5F5"/>
-            <Setter Property="BorderBrush" Value="#CCCCCC"/>
+            <Setter Property="Background" Value="PeachPuff"/>
+            <Setter Property="BorderBrush" Value="Peru"/>
             <Setter Property="BorderThickness" Value="1"/>
             <Setter Property="Margin" Value="5"/>
+        </Style>
+
+        <Style x:Key="BorderStyle" TargetType="Border">
+            <Setter Property="BorderBrush" Value="Pink"/>
+            <Setter Property="BorderThickness" Value="2"/>
+            <Setter Property="CornerRadius" Value="10"/>
+            <Setter Property="Background" Value="PeachPuff"/>
+        </Style>
+
+        <Style x:Key="CuteListViewItemStyle" TargetType="ListViewItem">
+            <Setter Property="Background" Value="PeachPuff"/>
+            <Setter Property="Foreground" Value="Chocolate"/>
+            <Setter Property="BorderBrush" Value="Pink"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="Padding" Value="5"/>
+            <Setter Property="Margin" Value="2"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="ListViewItem">
+                        <Border Name="Border" Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" CornerRadius="5">
+                            <ContentPresenter />
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsSelected" Value="True">
+                                <Setter TargetName="Border" Property="Background" Value="Peru"/>
+                                <Setter TargetName="Border" Property="BorderBrush" Value="Pink"/>
+                                <Setter Property="Foreground" Value="White"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <!-- CuteListViewStyle -->
+        <Style x:Key="CuteListViewStyle" TargetType="ListView">
+            <Setter Property="ItemContainerStyle" Value="{StaticResource CuteListViewItemStyle}"/>
+            <Setter Property="BorderBrush" Value="Pink"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="Background" Value="LightYellow"/>
         </Style>
     </Page.Resources>
 
@@ -24,24 +64,26 @@
             <TextBlock Text="GENRES" Style="{StaticResource HomeHeader}" Margin="0,0,185,0" />
         </StackPanel>
 
-        <Border Style="{StaticResource borders}">
-            <ListView x:Name="genreListView" ItemsSource="{Binding Source={StaticResource genreViewSource}}" Style="{StaticResource lvStyle}">
+        <Border Style="{StaticResource BorderStyle}">
+            <ListView x:Name="genreListView" ItemsSource="{Binding Source={StaticResource genreViewSource}}" Style="{StaticResource CuteListViewStyle}">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <WrapPanel Margin="10,1,0,1" Style="{StaticResource bgData}">
-                            <Expander Style="{StaticResource ExpanderStyle}" HorizontalAlignment="Stretch">
+                            <Expander Style="{StaticResource ExpanderStyle}" Width="725">
                                 <Expander.Header>
                                     <TextBlock FontWeight="Bold" Text="{Binding GenreName}" />
                                 </Expander.Header>
+                                <ScrollViewer Height="50">
+                                    <ItemsControl ItemsSource="{Binding TitleNames}">
+                                        <ItemsControl.ItemTemplate>
+                                            <DataTemplate>
 
-                                <ItemsControl ItemsSource="{Binding TitleNames}">
-                                    <ItemsControl.ItemTemplate>
-                                        <DataTemplate>
-                                            <TextBlock Text="{Binding}" />
-                                        </DataTemplate>
-                                    </ItemsControl.ItemTemplate>
-                                </ItemsControl>
+                                                <TextBlock Text="{Binding}" />
 
+                                            </DataTemplate>
+                                        </ItemsControl.ItemTemplate>
+                                    </ItemsControl>
+                                </ScrollViewer>
                             </Expander>
                         </WrapPanel>
                     </DataTemplate>
@@ -50,4 +92,3 @@
         </Border>
     </StackPanel>
 </Page>
-

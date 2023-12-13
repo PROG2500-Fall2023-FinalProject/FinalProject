@@ -31,8 +31,8 @@
                         <WrapPanel Margin="10,1,0,1" Style="{StaticResource bgData}">
                             <Grid>
                                 <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="360"/>
-                                    <ColumnDefinition Width="360"/>
+                                    <ColumnDefinition Width="300"/>
+                                    <ColumnDefinition Width="420"/>
                                 </Grid.ColumnDefinitions>
 
                                 <StackPanel Orientation="Vertical"
@@ -46,9 +46,17 @@
                                                Style="{StaticResource dataDetails}"/>
                                 </StackPanel>
 
-                                <TextBlock Text="{Binding Profession, StringFormat='Profession: {0}'}"
-                                           Grid.Column="1"
-                                           Style="{StaticResource dataDetails}"/>
+                                <StackPanel Orientation="Vertical"
+                                            Margin="0,0,0,10"
+                                            Grid.Column="1">
+
+                                    <TextBlock Text="Profession"
+                                                Style="{StaticResource dataTitle}"/>
+
+                                    <TextBlock Text="{Binding Profession}"
+                                                TextWrapping="Wrap"
+                                                Style="{StaticResource dataDetails}"/>
+                                </StackPanel>
                             </Grid>
                         </WrapPanel>
                     </DataTemplate>
