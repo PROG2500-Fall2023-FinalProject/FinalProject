@@ -47,7 +47,7 @@ namespace FinalProject.Pages
                     PrimaryName = actor.PrimaryName,
                     LifeYears = actor.LifeYears,
                     Profession = actor.Profession,
-                    MovieList = actor.Titles.Select(title => title.PrimaryTitle).ToList()
+                    MovieList = actor.TitlesNavigation.Select(title => title.PrimaryTitle).ToList()
                 };
 
             // set data from query to the source

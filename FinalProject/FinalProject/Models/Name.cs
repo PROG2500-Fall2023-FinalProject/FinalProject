@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.Specialized;
 using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Text;
@@ -28,18 +29,18 @@ namespace FinalProject.Models
             }
         }
 
-        //public List<string>? MovieList
-        //{
-        //    get
-        //    {
-        //       List<string> list = new List<string>();
-        //        foreach (Title title in this.Titles)
-        //        {
-        //            list.Add(title.PrimaryTitle);
-        //        }
-        //
-        //        return list;
-        //    }
-        //
+        public List<string>? MovieList
+        {
+            get
+            {
+               List<string> list = new List<string>();
+                foreach (Title title in this.Titles)
+                {
+                    list.Add(title.PrimaryTitle);
+                }
+        
+               return list;
+            }
+        }
     }
 }
