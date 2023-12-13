@@ -39,31 +39,16 @@
                                             Margin="0,0,0,10"
                                             Grid.Column="0">
 
-                                    <TextBlock Text="{Binding PrimaryName}"/>
-                                    <TextBlock Text="{Binding LifeYears, StringFormat='Alive: {0}'}"/>
-                                    <TextBlock Text="{Binding Profession, StringFormat='Profession: {0}'}"/>
+                                    <TextBlock Text="{Binding PrimaryName}"
+                                               Style="{StaticResource dataTitle}"/>
+                                    
+                                    <TextBlock Text="{Binding LifeYears, StringFormat='Alive: {0}'}"
+                                               Style="{StaticResource dataDetails}"/>
                                 </StackPanel>
 
-                                <Expander Header="View Movies"
-                                          Grid.Column="1"
-                                          MaxHeight="150" >
-
-                                    <ScrollViewer VerticalScrollBarVisibility="Auto">
-                                        <ListView ItemsSource="{Binding Source={StaticResource actorViewSource}}">
-                                            <ListView.ItemTemplate>
-                                                <DataTemplate>
-                                                    <ListView x:Name="TitlesListView" ItemsSource="{Binding MovieList}">
-                                                        <ListView.ItemTemplate>
-                                                            <DataTemplate>
-                                                                <TextBlock Text="{Binding}"/>
-                                                            </DataTemplate>
-                                                        </ListView.ItemTemplate>
-                                                    </ListView>
-                                                </DataTemplate>
-                                            </ListView.ItemTemplate>
-                                        </ListView>
-                                    </ScrollViewer>
-                                </Expander>
+                                <TextBlock Text="{Binding Profession, StringFormat='Profession: {0}'}"
+                                           Grid.Column="1"
+                                           Style="{StaticResource dataDetails}"/>
                             </Grid>
                         </WrapPanel>
                     </DataTemplate>
