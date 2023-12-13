@@ -32,8 +32,8 @@ namespace FinalProject.Pages
             InitializeComponent();
             genreViewSource = (CollectionViewSource)FindResource(nameof(genreViewSource));
 
-            _context.Genres.Load();
-            _context.Titles.Load();
+            //_context.Genres.Load();
+            //_context.Titles.Load();
 
             var query = from genre in _context.Genres
                         select new

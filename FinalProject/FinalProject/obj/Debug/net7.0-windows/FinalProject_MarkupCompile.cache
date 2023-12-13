@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-D:\sarah\nscc\fall2023\PROG2500\FinalProject\FinalProject\FinalProject\obj\Debug\net7.0-windows\
+C:\Users\alexs\Documents\School\PROG 2500 - Windows Programming C#\Assignments\FinalProject\FinalProject\FinalProject\obj\Debug\net7.0-windows\
 FinalProject
 none
 false
 TRACE;DEBUG;NET;NET7_0;NETCOREAPP
-D:\sarah\nscc\fall2023\PROG2500\FinalProject\FinalProject\FinalProject\App.xaml
-4-1526478209
+C:\Users\alexs\Documents\School\PROG 2500 - Windows Programming C#\Assignments\FinalProject\FinalProject\FinalProject\App.xaml
+5-1459404406
 
-15-273448035
-226335730570
-MainWindow.xaml;Pages\Actors.xaml;Pages\Home.xaml;Pages\Movies.xaml;
+17117023026
+226-1700970093
+MainWindow.xaml;Pages\Actors.xaml;Pages\Genres.xaml;Pages\Home.xaml;Pages\Movies.xaml;
 
 False
 

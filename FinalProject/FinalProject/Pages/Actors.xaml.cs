@@ -15,6 +15,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Diagnostics;
+using System.Numerics;
 
 namespace FinalProject.Pages
 {
@@ -26,32 +28,30 @@ namespace FinalProject.Pages
         public Actors()
         {
             InitializeComponent();
-
-            //Tie the markup viewsource object to the code viewsource object
             actorViewSource = (CollectionViewSource)FindResource(nameof(actorViewSource));
-
-            //Use the dbContext to tell EF to load the data we'll use on this page
-            _context.Names.Load();
-
-            //Set the viewsource data source to use the actor data collection
-            actorViewSource.Source = _context.Names.Local.ToObservableCollection();
-            actorViewSource.Source = _context.Titles.Local.ToObservableCollection();
-
-            //Set the listview with actor data
             ActorListView.ItemsSource = _context.Names.Local.ToObservableCollection();
         }
 
         private void btnSearch_Click(object sender, RoutedEventArgs e)
         {
+            // grab text from search bar
             string searchTerm = actorSearch.Text;
 
             // linq query expression
-            var query =
+            var actorsQuery =
                 from actor in _context.Names
                 where actor.PrimaryName.Contains(searchTerm)
-                select actor;
+                select new
+                {
+                    // select only the data required
+                    PrimaryName = actor.PrimaryName,
+                    LifeYears = actor.LifeYears,
+                    Profession = actor.Profession,
+                    MovieList = actor.Titles.Select(title => title.PrimaryTitle).ToList()
+                };
 
-            ActorListView.ItemsSource = query.ToList();
+            // set data from query to the source
+            actorViewSource.Source = actorsQuery.ToList();
         }
     }
 }

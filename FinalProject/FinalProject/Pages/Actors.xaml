@@ -12,73 +12,57 @@
         <CollectionViewSource x:Key="actorViewSource"/>
     </Page.Resources>
 
-    <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="auto"/>
-            <RowDefinition Height="auto"/>
-        </Grid.RowDefinitions>    
-
-        <StackPanel Orientation="Horizontal"
-                    Margin="35,5,35,0"
-                    Grid.Row="0">
-            <TextBlock Text="ACTORS PAGE" Style="{StaticResource HomeHeader}" Margin="0,0,185,0" />
+    <StackPanel>
+        <StackPanel Orientation="Horizontal" Margin="35,5,35,0">
+            <TextBlock Text="ACTORS" Style="{StaticResource HomeHeader}" Margin="0,0,260,0" />
             <TextBox x:Name="actorSearch" Text="i.e. actor name" Style="{StaticResource SearchBox}" />
             <Button x:Name="btnSearch" Click="btnSearch_Click" Style="{StaticResource SearchBtn}">
                 <Image Source="{StaticResource search}"/>
             </Button>
         </StackPanel>
 
-        <ListView x:Name="ActorListView"
+        <Border Style="{StaticResource borders}">
+            <ListView x:Name="ActorListView"
                   ItemsSource="{Binding Source={StaticResource actorViewSource}}"
-                  Grid.Row="1">
+                  Style="{StaticResource lvStyle}">
 
-            <ListView.ItemTemplate>
-                <DataTemplate DataType="local.Names">
-                    <Grid>
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="200"/>
-                            <ColumnDefinition Width="*"/>
-                        </Grid.ColumnDefinitions>
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <WrapPanel Margin="10,1,0,1" Style="{StaticResource bgData}">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="360"/>
+                                    <ColumnDefinition Width="360"/>
+                                </Grid.ColumnDefinitions>
 
-                        <StackPanel Orientation="Vertical"
-                                        Margin="0,0,0,10"
-                                        Grid.Column="0">
+                                <StackPanel Orientation="Vertical"
+                                            Margin="0,0,0,10"
+                                            Grid.Column="0">
 
-                            <TextBlock Text="{Binding PrimaryName}"/>
-                            <TextBlock Text="{Binding BirthYear, StringFormat='Born: {0}'}"/>
-                            <TextBlock Text="{Binding DeathYear, StringFormat='Died: {0}'}"/>
-                            <TextBlock Text="{Binding PrimaryProfession, StringFormat='Primary Profession: {0}'}"/>
-                        </StackPanel>
+                                    <TextBlock Text="{Binding PrimaryName}"/>
+                                    <TextBlock Text="{Binding LifeYears, StringFormat='Alive: {0}'}"/>
+                                    <TextBlock Text="{Binding Profession, StringFormat='Profession: {0}'}"/>
+                                </StackPanel>
 
-                        <Expander Header="View Movies"
-                                        Grid.Column="1">
-                            <ListView ItemsSource="{Binding Titles}"
-                                      MaxHeight="300"
-                                      Width="500">
+                                <Expander Header="View Movies"
+                                          Grid.Column="1"
+                                          MaxHeight="150" >
 
-                                <ListView.ItemTemplate>
-                                    <DataTemplate DataType="local.Titles">
-                                        <Grid>
-                                            <Grid.ColumnDefinitions>
-                                                <ColumnDefinition Width="*"/>
-                                                <ColumnDefinition Width="*"/>
-                                                <ColumnDefinition Width="*"/>
-                                            </Grid.ColumnDefinitions>
-
-                                            <TextBlock Text="{Binding primaryTitle, StringFormat='Title: {0}'}"
-                                                        Grid.Column="0"/>
-                                            <TextBlock Text="{Binding EndYear, StringFormat='Year: {0}'}"
-                                                        Grid.Column="1"/>
-                                            <TextBlock Text="{Binding RuntimeMinutes, StringFormat='Length: {0}'}"
-                                                        Grid.Column="2"/>
-                                        </Grid>
-                                    </DataTemplate>
-                                </ListView.ItemTemplate>
-                            </ListView>
-                        </Expander>
-                    </Grid>
-                </DataTemplate>
-            </ListView.ItemTemplate>
-        </ListView>
-    </Grid>
+                                    <ScrollViewer VerticalScrollBarVisibility="Auto">
+                                        <ListView ItemsSource="{Binding Source={StaticResource actorViewSource}}">
+                                            <ListView.ItemTemplate>
+                                                <DataTemplate>
+                                                    <TextBlock Text="{Binding MovieList}" />
+                                                </DataTemplate>
+                                            </ListView.ItemTemplate>
+                                        </ListView>
+                                    </ScrollViewer>
+                                </Expander>
+                            </Grid>
+                        </WrapPanel>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </Border>
+    </StackPanel>
 </Page>

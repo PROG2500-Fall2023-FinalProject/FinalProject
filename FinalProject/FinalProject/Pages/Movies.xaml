@@ -14,7 +14,7 @@
 
     <StackPanel>
         <StackPanel Orientation="Horizontal" Margin="35,5,35,0">
-            <TextBlock Text="MOVIES PAGE" Style="{StaticResource HomeHeader}" Margin="0,0,185,0" />
+            <TextBlock Text="MOVIES PAGE" Style="{StaticResource HomeHeader}" Margin="0,0,170,0" />
             <TextBox x:Name="movieSearch" Text="i.e. movie name" Style="{StaticResource SearchBox}" />
             <Button x:Name="btnSearch" Click="btnSearch_Click" Style="{StaticResource SearchBtn}">
                 <Image Source="{StaticResource search}"/>
